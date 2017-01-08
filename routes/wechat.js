@@ -14,11 +14,16 @@ router.use(express.query());
 
 router.use('/',wechat(config,function(req, res, next){
     console.log(req.weixin);
-    console.log('dddd');
-    res.reply('Hello world!');
+//    res.reply('Hello world!');   每一次只能回复一条，多余报错
     var message = req.weixin;
     if(message.Content == '1'){
-        res.reply('hhe');
+        res.reply('壹');
+    }
+    else if(message.Content == '2'){
+        res.reply('贰');
+    }
+    else{
+        res.reply('自动回复生效！');
     }
 }));
 
