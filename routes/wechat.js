@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var wechat = require('wechat');
+var wechatApi = require('wechat-api');
 
 
 var config={
@@ -9,6 +10,8 @@ var config={
     appsecret:'677b3785d5ccdb0a629905223dbb225d',
     encodingAESKey:'hFv18SQkjayHZSmkxxoPUiW6lJoVNgOY1aP6FURnE9F'
 }
+
+var api = new wechatApi('wxeb76aa92a1398e2d','677b3785d5ccdb0a629905223dbb225d');
 
 router.use(express.query());
 
