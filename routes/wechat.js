@@ -16,10 +16,10 @@ router.use('/',wechat(config,function(req, res, next){
     console.log(req.weixin);
     console.log('dddd');
     res.reply('Hello world!');
-    // var message = req.weixin;
-    // if(message.Content === '1'){
-    //     res.reply('hhe');
-    // }
+    var message = req.weixin;
+    if(message.Content == '1'){
+        res.reply('hhe');
+    }
 }));
 
 module.exports = router;
