@@ -7,7 +7,7 @@ var config={
     token:'wxexpress',
     appid:'wxeb76aa92a1398e2d',
     appsecret:'677b3785d5ccdb0a629905223dbb225d',
-    encodingAESKey:''
+    encodingAESKey:'hFv18SQkjayHZSmkxxoPUiW6lJoVNgOY1aP6FURnE9F'
 }
 
 router.use(express.query());
