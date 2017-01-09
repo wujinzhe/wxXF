@@ -31,15 +31,14 @@ router.use('/',wechat(config,function(req, res, next){
                {
                  "type":"view",
                  "name":"搜索",
-                 "url":"http://www.soso.com/"
+                 "url":"http://m.iboxpay.com/"
                },
                {
                  "type":"click",
                  "name":"赞一下我们",
                  "key":"V1001_GOOD"
                }]
-             }]
-           }
+             }
          ]
     };
     api.createMenu(menu,function(data){console.log(data)});
