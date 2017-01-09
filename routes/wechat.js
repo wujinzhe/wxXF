@@ -17,6 +17,32 @@ router.use(express.query());
 
 router.use('/',wechat(config,function(req, res, next){
     console.log(req.weixin);
+
+    var menu = {
+         "button":[
+           {
+             "type":"click",
+             "name":"今日歌曲",
+             "key":"V1001_TODAY_MUSIC"
+           },
+           {
+             "name":"菜单",
+             "sub_button":[
+               {
+                 "type":"view",
+                 "name":"搜索",
+                 "url":"http://www.soso.com/"
+               },
+               {
+                 "type":"click",
+                 "name":"赞一下我们",
+                 "key":"V1001_GOOD"
+               }]
+             }]
+           }
+         ]
+    };
+    api.createMenu(menu,function(data){console.log(data)});
 //    res.reply('Hello world!');   每一次只能回复一条，多余报错
     var message = req.weixin;
     if(message.Content == '1'){
